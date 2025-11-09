@@ -5,10 +5,18 @@ export const generateMockCauldronData = (cauldrons) => {
     const remainingCapacity = cauldron.max_volume - currentVolume;
     const timeToFull = Math.round(remainingCapacity / fillRate);
     
+    // Determine if there's a discrepancy (20% chance)
+    const hasDiscrepancy = Math.random() > 0.8;
+    
+    // Status priority: Critical (overflow) > Warning (discrepancy) > Collecting > Normal
     let status = 'normal';
-    if (currentVolume > cauldron.max_volume * 0.9) status = 'critical';
-    else if (currentVolume > cauldron.max_volume * 0.75) status = 'warning';
-    else if (Math.random() > 0.7) status = 'collecting';
+    if (currentVolume > cauldron.max_volume * 0.9) {
+      status = 'critical'; // Critical overflow - needs immediate attention
+    } else if (hasDiscrepancy) {
+      status = 'warning'; // Discrepancy detected - track this!
+    } else if (Math.random() > 0.7) {
+      status = 'collecting'; // Currently being collected by courier
+    }
     
     return {
       ...cauldron,
@@ -16,7 +24,7 @@ export const generateMockCauldronData = (cauldrons) => {
       fillRate: parseFloat(fillRate),
       timeToFull: `${timeToFull} min`,
       status,
-      hasDiscrepancy: Math.random() > 0.8,
+      hasDiscrepancy,
       maxVolume: cauldron.max_volume
     };
   });
