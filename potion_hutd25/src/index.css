@@ -1,7 +1,0 @@
-@import "tailwindcss";
-
-@theme {
-  --color-cyan-400: #22d3ee;
-  --color-cyan-500: #06b6d4;
-  --color-cyan-600: #0891b2;
-}
