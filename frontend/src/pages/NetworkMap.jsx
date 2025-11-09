@@ -27,7 +27,7 @@ export default function NetworkMap() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pt-20">
       <Navigation />
       
       <div className="container mx-auto px-6 py-8">

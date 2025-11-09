@@ -48,7 +48,7 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pt-20">
       <Navigation />
       
       {/* Hero Section */}
@@ -127,22 +127,22 @@ export default function Dashboard() {
 
         {/* Quick Actions */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <NavLink to="/map">
-            <Card className="glass-card p-6 hover:glow-primary transition-all duration-300 cursor-pointer group">
+          <NavLink to="/map" className="block">
+            <Card className="glass-card p-6 hover:glow-primary transition-all duration-300 cursor-pointer group h-full">
               <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">Network Map</h3>
               <p className="text-muted-foreground">Visualize cauldron locations and transport routes</p>
             </Card>
           </NavLink>
           
-          <NavLink to="/discrepancies">
-            <Card className="glass-card p-6 hover:glow-accent transition-all duration-300 cursor-pointer group">
+          <NavLink to="/discrepancies" className="block">
+            <Card className="glass-card p-6 hover:glow-accent transition-all duration-300 cursor-pointer group h-full">
               <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-accent transition-colors">Analyze Discrepancies</h3>
               <p className="text-muted-foreground">Detect and resolve ticket mismatches</p>
             </Card>
           </NavLink>
           
-          <NavLink to="/history">
-            <Card className="glass-card p-6 hover:glow-primary transition-all duration-300 cursor-pointer group">
+          <NavLink to="/history" className="block">
+            <Card className="glass-card p-6 hover:glow-primary transition-all duration-300 cursor-pointer group h-full">
               <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">Historical Playback</h3>
               <p className="text-muted-foreground">Review past potion flow and events</p>
             </Card>

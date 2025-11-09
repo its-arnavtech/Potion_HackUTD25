@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Landing from '@/pages/Landing';
 import Dashboard from '@/pages/Dashboard';
 import NetworkMap from '@/pages/NetworkMap';
 import DiscrepancyAnalyzer from '@/pages/DiscrepancyAnalyzer';
@@ -11,7 +12,8 @@ function App() {
     <div className="App min-h-screen">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/" element={<Landing />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/map" element={<NetworkMap />} />
           <Route path="/discrepancies" element={<DiscrepancyAnalyzer />} />
           <Route path="/history" element={<HistoricalPlayback />} />
