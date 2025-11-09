@@ -195,3 +195,29 @@ code {
 ::-webkit-scrollbar-thumb:hover {
     background: hsl(259 88% 75%);
 }
+
+/* Markdown content styling */
+.markdown-content {
+    line-height: 1.7;
+}
+
+.markdown-content h1:first-child {
+    margin-top: 0;
+}
+
+.markdown-content code {
+    font-family: 'Courier New', monospace;
+}
+
+.markdown-content pre {
+    overflow-x: auto;
+}
+
+.markdown-content a {
+    color: hsl(259 88% 65%);
+    text-decoration: underline;
+}
+
+.markdown-content a:hover {
+    color: hsl(259 88% 75%);
+}

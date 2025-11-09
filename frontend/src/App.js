@@ -4,6 +4,8 @@ import Dashboard from '@/pages/Dashboard';
 import NetworkMap from '@/pages/NetworkMap';
 import DiscrepancyAnalyzer from '@/pages/DiscrepancyAnalyzer';
 import HistoricalPlayback from '@/pages/HistoricalPlayback';
+import AIAgent from '@/pages/AIAgent';
+import ChatBubble from '@/components/ChatBubble';
 import { Toaster } from '@/components/ui/sonner';
 import '@/App.css';
 
@@ -17,7 +19,9 @@ function App() {
           <Route path="/map" element={<NetworkMap />} />
           <Route path="/discrepancies" element={<DiscrepancyAnalyzer />} />
           <Route path="/history" element={<HistoricalPlayback />} />
+          <Route path="/ai-agent" element={<AIAgent />} />
         </Routes>
+        <ChatBubble />
       </BrowserRouter>
       <Toaster />
     </div>

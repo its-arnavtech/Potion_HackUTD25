@@ -1,12 +1,13 @@
 import { NavLink } from 'react-router-dom';
-import { Home, Map, AlertTriangle, Clock } from 'lucide-react';
+import { Home, Map, AlertTriangle, Clock, Bot } from 'lucide-react';
 
 export const Navigation = () => {
   const navItems = [
     { path: '/dashboard', label: 'Dashboard', icon: Home },
     { path: '/map', label: 'Network Map', icon: Map },
     { path: '/discrepancies', label: 'Discrepancies', icon: AlertTriangle },
-    { path: '/history', label: 'History', icon: Clock }
+    { path: '/history', label: 'History', icon: Clock },
+    { path: '/ai-agent', label: 'AI Agent', icon: Bot }
   ];
 
   return (
